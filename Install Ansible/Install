@@ -20,9 +20,9 @@ Step:2 (Generate SSH Key pair for password less authentication)
 ssh-keygen -t rsa -b 4096 -C "ansible.foss.corp"
 
 Step3: (copy the above ssh keys to the desired nodes/hosts so the ansible CM can talk to them )
-# ssh-copy-id server1@192.168.0.112
-# ssh-copy-id server2@192.168.0.113
-# ssh-copy-id server3@192.168.0.114
+ssh-copy-id server1@192.168.0.112
+ssh-copy-id server2@192.168.0.113
+ssh-copy-id server3@192.168.0.114
 
 
 Step4: ( After copying all SSH Keys to remote host, now perform a ssh key authentication on all remote hosts to check whether authentication working or not)
