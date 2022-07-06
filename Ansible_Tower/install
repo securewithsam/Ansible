@@ -2,7 +2,8 @@
 4Gb RAM 
 2/4vCPU
 
-
+sudo yum update -y
+sudo yum install wget tar
 sudo wget https://releases.ansible.com/ansible-tower/setup-bundle/ansible-tower-setup-bundle-latest.tar.gz
 sudo tar -xzvf ansible-tower-setup-bundle-latest.tar.gz
 cd ansible-tower-setup-bundle-3.8.6-2/
@@ -19,7 +20,11 @@ esc
 
 
 sudo vim /roles/preflight/defaults/main.yml
+i
 [change required_ram: 2048 ]
+esc
+:wq
+
 cd
 cd ansible-tower-setup-bundle-3.8.6-2/
 sudo ./setup.sh
