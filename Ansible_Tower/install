@@ -30,4 +30,5 @@ cd ansible-tower-setup-bundle-3.8.6-2/
 sudo ./setup.sh
 
 https://xx.xx.xx.xx
-
+Login :
+admin/Admin@123
