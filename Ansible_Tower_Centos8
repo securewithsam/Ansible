@@ -1,0 +1,28 @@
+# Ansible tower needs Centos 8
+4Gb RAM 
+2/4vCPU
+
+
+sudo wget https://releases.ansible.com/ansible-tower/setup-bundle/ansible-tower-setup-bundle-latest.tar.gz
+sudo tar -xzvf ansible-tower-setup-bundle-latest.tar.gz
+cd ansible-tower-setup-bundle-3.8.6-2/
+sudo vim inventory
+i
+
+[update below]
+
+admin_password='Admin@123'
+pg_password='Admin@123'
+
+esc
+:wq
+
+
+sudo vim /roles/preflight/defaults/main.yml
+[change required_ram: 2048 ]
+cd
+cd ansible-tower-setup-bundle-3.8.6-2/
+sudo ./setup.sh
+
+https://xx.xx.xx.xx
+
