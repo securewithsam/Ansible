@@ -30,21 +30,28 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o 
 sudo apt-get update
 ```
 
-#Install Docker Compose:
+# Install Docker Compose:
+
+```sh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
+```
 
-#Install Node.js and NPM
+# Install Node.js and NPM
+
+```sh
 apt-get install nodejs npm -y
 npm install npm --global
 
 apt-get install python3-pip git pwgen -y
 pip3 install docker-compose==1.28.5
+```
 
-#Install AWX
+# Install AWX
 
+```sh
 wget https://github.com/ansible/awx/archive/17.1.0.zip
 unzip 17.1.0.zip
 cd awx-17.1.0/installer/
@@ -60,5 +67,6 @@ cd /usr/local/bin/
 chmod +x docker-compose
 
 ansible-playbook -i inventory install.yml
+```
 
 http://your-server-ip
