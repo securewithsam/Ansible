@@ -47,6 +47,7 @@ sudo apt-get update
 
 # Install Docker Compose:
 
+
 ```sh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
@@ -67,9 +68,17 @@ docker-compose --version
 
 ```sh
 apt-get install nodejs npm -y
-npm install npm --global
+```
 
+```sh
+npm install npm --global
+```
+
+```sh
 apt-get install python3-pip git pwgen -y
+```
+
+```sh
 pip3 install docker-compose==1.28.5
 ```
 
@@ -78,11 +87,17 @@ pip3 install docker-compose==1.28.5
 ```sh
 wget https://github.com/ansible/awx/archive/17.1.0.zip
 ```
+
 ```sh
 unzip 17.1.0.zip
 ```
+
 cd awx-17.1.0/installer/
+
+```sh
 pwgen -N 1 -s 30
+```
+
 nano inventory
 [update below]
 
@@ -90,9 +105,12 @@ admin_user=admin
 admin_password=securepassword
 secret_key=[generated with line 47 above]
 
+```sh
 cd /usr/local/bin/
 chmod +x docker-compose
+```
 
+```sh
 ansible-playbook -i inventory install.yml
 ```
 
