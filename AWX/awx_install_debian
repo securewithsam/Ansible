@@ -32,9 +32,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-cd /usr/local/bin/
-chmod +x docker-compose
-
 #Install Node.js and NPM
 apt-get install nodejs npm -y
 npm install npm --global
@@ -53,11 +50,11 @@ nano inventory
 
 admin_user=admin
 admin_password=securepassword
-secret_key=3BgGA8MnM4gKTXV8r7vQhwjjNixO6o
+secret_key=[generated with line 47 above]
+
+cd /usr/local/bin/
+chmod +x docker-compose
 
 ansible-playbook -i inventory install.yml
 
 http://your-server-ip
-
-
-
