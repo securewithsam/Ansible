@@ -118,4 +118,4 @@ chmod +x docker-compose
 ansible-playbook -i inventory install.yml
 ```
 
-http://your-server-ip
+# http://your-server-ip
