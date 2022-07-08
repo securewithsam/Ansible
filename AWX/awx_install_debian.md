@@ -92,7 +92,9 @@ wget https://github.com/ansible/awx/archive/17.1.0.zip
 unzip 17.1.0.zip
 ```
 
+```sh
 cd awx-17.1.0/installer/
+```
 
 ```sh
 pwgen -N 1 -s 30
