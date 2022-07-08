@@ -100,7 +100,9 @@ cd awx-17.1.0/installer/
 pwgen -N 1 -s 30
 ```
 
+```sh
 nano inventory
+```
 [update below]
 
 admin_user=admin
