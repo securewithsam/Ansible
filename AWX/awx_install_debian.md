@@ -25,13 +25,23 @@ sudo apt-get install \
     curl \
     gnupg \
     lsb-release
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
 
+```sh
+sudo mkdir -p /etc/apt/keyrings
+```
+
+```sh
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+```sh
  echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  
+```
+
+```sh
 sudo apt-get update
 ```
 
@@ -39,8 +49,17 @@ sudo apt-get update
 
 ```sh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+```sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+```sh
 sudo chmod +x /usr/local/bin/docker-compose
+```
+
+```sh
 docker-compose --version
 ```
 
@@ -58,7 +77,10 @@ pip3 install docker-compose==1.28.5
 
 ```sh
 wget https://github.com/ansible/awx/archive/17.1.0.zip
+```
+```sh
 unzip 17.1.0.zip
+```
 cd awx-17.1.0/installer/
 pwgen -N 1 -s 30
 nano inventory
