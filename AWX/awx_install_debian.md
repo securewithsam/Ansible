@@ -3,10 +3,15 @@
 ```sh
 apt-get update -y
 apt-get install apt-transport-https ca-certificates software-properties-common unzip gnupg2 curl git -y
+```
 
+```sh
 echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" | tee /etc/apt/sources.list.d/ansible.list
+```
 
+```sh
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+```
 
 apt-get update -y
 apt-get install ansible -y
