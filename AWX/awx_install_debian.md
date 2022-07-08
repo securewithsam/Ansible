@@ -13,6 +13,7 @@ echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" | tee /et
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 ```
 
+```sh
 apt-get update -y
 apt-get install ansible -y
 ```
