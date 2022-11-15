@@ -1,7 +1,0 @@
-#Creating Inventory File for Remote Hosts)
-sudo nano /etc/ansible/hosts
-
-[web-servers]
-192.168.0.112
-192.168.0.113
-192.168.0.114
